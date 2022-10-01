@@ -1,7 +1,6 @@
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
-# testing    
     root /usr/share/nginx/html;
     index index.html index.htm;
 
