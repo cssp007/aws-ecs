@@ -1,8 +1,12 @@
 {
     "family": "nginx-firelens-test",
     "executionRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
     "cpu": "512",
     "memory": "1024",
+    "runtimePlatform": {
+      "operatingSystemFamily": "LINUX"
+    },
     "requiresCompatibilities": [
         "FARGATE"
     ],
