@@ -14,7 +14,7 @@
     "containerDefinitions": [
         {
             "name": "log_router",
-            "image": "docker.io/amazon/aws-for-fluent-bit:latest",
+            "image": "812398421555.dkr.ecr.ap-south-1.amazonaws.com/testing:aws-for-fluent-bit",
             "essential": true,
             "firelensConfiguration": {
                 "type": "fluentbit",
@@ -34,7 +34,7 @@
         },
         {
             "name": "nginx-test",
-            "image": "nginx",
+            "image": "812398421555.dkr.ecr.ap-south-1.amazonaws.com/testing:nginx",
             "portMappings": [
                 {
                     "containerPort": 80
