@@ -1,0 +1,54 @@
+{
+    "family": "nginx-firelens-test",
+    "executionRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
+    "cpu": "512",
+    "memory": "1024",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "log_router",
+            "image": "docker.io/amazon/aws-for-fluent-bit:latest",
+            "essential": true,
+            "firelensConfiguration": {
+                "type": "fluentbit",
+                "options":{
+                   "enable-ecs-log-metadata":"true"
+                }
+            },
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "firelens-container",
+                    "awslogs-region": "ap-south-1",
+                    "awslogs-stream-prefix": "firelens"
+                }
+            }
+        },
+        {
+            "name": "nginx-test",
+            "image": "nginx",
+            "portMappings": [
+                {
+                    "containerPort": 80
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "logConfiguration": {
+                "logDriver": "awsfirelens",
+                "secretOptions": [],
+                "options": {
+                    "Name": "es",
+                    "Host": "172.31.12.41",
+                    "Port": "9200",
+                    "Index": "ecs-logs",
+                    "Type": "logs"
+                }
+            }
+        }
+    ]
+}
