@@ -1,5 +1,5 @@
 {
-    "family": "nginx-firelens-test",
+    "family": "custom-nginx-testing",
     "executionRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
     "taskRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
     "cpu": "512",
