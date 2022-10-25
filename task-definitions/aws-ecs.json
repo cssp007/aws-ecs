@@ -3,7 +3,7 @@
     "executionRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
     "taskRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
     "cpu": "1024",
-    "memory": "1024",
+    "memory": "2048",
     "runtimePlatform": {
       "operatingSystemFamily": "LINUX"
     },
