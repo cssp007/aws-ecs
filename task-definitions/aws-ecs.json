@@ -34,7 +34,7 @@
         },
         {
             "name": "nginx-test",
-            "image": "812398421555.dkr.ecr.ap-south-1.amazonaws.com/testing:nginx",
+            "image": "812398421555.dkr.ecr.ap-south-1.amazonaws.com/custom-nginx:latest",
             "portMappings": [
                 {
                     "containerPort": 80
