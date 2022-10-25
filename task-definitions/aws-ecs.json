@@ -14,7 +14,7 @@
     "containerDefinitions": [
         {
             "name": "log_router",
-            "image": "812398421555.dkr.ecr.ap-south-1.amazonaws.com/testing:8",
+            "image": "812398421555.dkr.ecr.ap-south-1.amazonaws.com/testing:aws-for-fluent-bit",
             "essential": true,
             "firelensConfiguration": {
                 "type": "fluentbit",
