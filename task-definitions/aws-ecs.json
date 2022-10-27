@@ -2,8 +2,8 @@
     "family": "custom-nginx-testing",
     "executionRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
     "taskRoleArn": "arn:aws:iam::812398421555:role/ecsTaskExecutionRole",
-    "cpu": "1024",
-    "memory": "2048",
+    "cpu": "512",
+    "memory": "1024",
     "runtimePlatform": {
       "operatingSystemFamily": "LINUX"
     },
